@@ -174,8 +174,8 @@
                 content.innerHTML = `
                     <h2>${mission} - ${locationData.description}</h2>
                     <div class="location-images">
-                        <img src="${locationData.gemImg}" alt="Gem location image">
-                        <img src="${locationData.booImg}" alt="Boo location image">
+                        <img src="${locationData.gemImg}" alt="Gem location image" onerror="this.onerror=null;this.src='fallback.jpg';">
+                        <img src="${locationData.booImg}" alt="Boo location image" onerror="this.onerror=null;this.src='fallback.jpg';">
                     </div>
                     <p><strong>How to Obtain:</strong> ${locationData.steps}</p>
                 `;
