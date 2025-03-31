@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luigi's Mansion 2 HD Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+        }
+        #content {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #222;
+            display: inline-block;
+            max-width: 600px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        select {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Luigi's Mansion 2 HD - Gem & Boo Locations</h1>
+    <label for="mansion">Select Mansion:</label>
+    <select id="mansion" onchange="updateMissions()">
+        <option value="mansion1">Gloomy Manor</option>
+        <option value="mansion2">Haunted Towers</option>
+        <option value="mansion3">Old Clockworks</option>
+        <option value="mansion4">Secret Mine</option>
+        <option value="mansion5">Treacherous Mansion</option>
+    </select>
+    
+    <label for="mission">Select Mission:</label>
+    <select id="mission" onchange="showLocation()">
+        <!-- Options will be populated dynamically -->
+    </select>
+    
+    <div id="content"></div>
+    
+    <script>
+        const locations = {
+            mansion1: {
+                "A-1": { 
+                    description: "Gem near the stairs", 
+                    img: "images/mansion1_a1.jpg", 
+                    steps: "Use the Poltergust to pull down the chandelier, revealing the gem." 
+                },
+                "A-2": { 
+                    description: "Boo hiding in the kitchen", 
+                    img: "images/mansion1_a2.jpg", 
+                    steps: "Shine the Dark-Light Device on the missing object to reveal Boo's hiding spot." 
+                }
+            },
+            mansion2: {
+                "B-1": { 
+                    description: "Gem in the greenhouse", 
+                    img: "images/mansion2_b1.jpg", 
+                    steps: "Water the nearby plant using the bucket to make the gem appear." 
+                },
+                "B-2": { 
+                    description: "Boo behind the waterfall", 
+                    img: "images/mansion2_b2.jpg", 
+                    steps: "Use the Dark-Light Device near the waterfall to reveal a hidden path leading to the Boo." 
+                }
+            }
+        };
+        
+        const missions = {
+            mansion1: ["A-1", "A-2", "A-3", "A-4", "A-5", "Boss"],
+            mansion2: ["B-1", "B-2", "B-3", "B-4", "B-5", "Boss"],
+            mansion3: ["C-1", "C-2", "C-3", "C-4", "C-5", "Boss"],
+            mansion4: ["D-1", "D-2", "D-3", "D-4", "Boss"],
+            mansion5: ["E-1", "E-2", "E-3", "E-4", "E-5", "Boss"]
+        };
+
+        function updateMissions() {
+            const mansion = document.getElementById("mansion").value;
+            const missionSelect = document.getElementById("mission");
+            missionSelect.innerHTML = "";
+            missions[mansion].forEach(mission => {
+                const option = document.createElement("option");
+                option.value = mission;
+                option.textContent = mission;
+                missionSelect.appendChild(option);
+            });
+            showLocation();
+        }
+        
+        function showLocation() {
+            const mansion = document.getElementById("mansion").value;
+            const mission = document.getElementById("mission").value;
+            const content = document.getElementById("content");
+            const locationData = locations[mansion]?.[mission];
+            
+            if (locationData) {
+                content.innerHTML = `
+                    <h2>${mission} - ${locationData.description}</h2>
+                    <img src="${locationData.img}" alt="Location image">
+                    <p><strong>How to Obtain:</strong> ${locationData.steps}</p>
+                `;
+            } else {
+                content.innerHTML = `<h2>${mission}</h2><p>No data available yet.</p>`;
+            }
+        }
+        
+        updateMissions();
+    </script>
+</body>
+</html>
