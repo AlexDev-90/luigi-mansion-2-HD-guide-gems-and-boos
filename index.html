@@ -34,6 +34,11 @@
             font-size: 14px;
             color: #888;
         }
+        .credits {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -54,8 +59,13 @@
     
     <div id="content"></div>
     
-    <footer>Made with love by AlexDev-90</footer>
-    <footer><small>Images sourced from <a href="https://gamerant.com">Game Rant</a>.</small></footer>
+    <footer>
+        Made with love by AlexDev-90
+        <div class="credits">
+            <p>Images sourced from <a href="https://gamerant.com" target="_blank">Game Rant</a>.</p>
+            <p>Contributions by Peter</p>
+        </div>
+    </footer>
     
     <script>
         const locations = {
@@ -69,6 +79,31 @@
                     description: "Boo hiding in the kitchen", 
                     img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/gloomy_manor_a2.jpg", 
                     steps: "Shine the Dark-Light Device on the missing object to reveal Boo's hiding spot." 
+                },
+                "A-3": { 
+                    description: "Gem behind a bookshelf", 
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/gloomy_manor_a3.jpg", 
+                    steps: "Pull the bookshelf using the Poltergust to reveal the gem." 
+                },
+                "A-4": {
+                    description: "Gem in the library",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/gloomy_manor_a4.jpg",
+                    steps: "Find the gem inside the book in the library after solving the puzzle."
+                },
+                "A-5": {
+                    description: "Gem in the attic",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/gloomy_manor_a5.jpg",
+                    steps: "Use the Poltergust to reveal the gem in the attic after clearing the cobwebs."
+                },
+                "Boo": {
+                    description: "Boo in the attic",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/gloomy_manor_boo.jpg",
+                    steps: "Shine the Dark-Light Device on the object and capture Boo."
+                },
+                "Boss": {
+                    description: "Boss battle with the A-5 gem",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/gloomy_manor_boss.jpg",
+                    steps: "Defeat the boss to obtain the final gem of the mission."
                 }
             },
             mansion2: {
@@ -81,16 +116,80 @@
                     description: "Boo behind the waterfall", 
                     img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/haunted_towers_b2.jpg", 
                     steps: "Use the Dark-Light Device near the waterfall to reveal a hidden path leading to the Boo." 
+                },
+                "B-3": { 
+                    description: "Gem in the hall", 
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/haunted_towers_b3.jpg", 
+                    steps: "Shine the Dark-Light Device on the wall to reveal the hidden gem." 
+                },
+                "Boo": {
+                    description: "Boo hiding in the hallway",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/haunted_towers_boo.jpg",
+                    steps: "Find Boo hiding in the hallway after solving the puzzle."
+                },
+                "B-5": {
+                    description: "Gem behind the curtain",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/haunted_towers_b5.jpg",
+                    steps: "Pull the curtain aside to find the hidden gem."
+                },
+                "Boss": {
+                    description: "Boss battle with the B-5 gem",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/haunted_towers_boss.jpg",
+                    steps: "Defeat the boss to obtain the final gem of the mission."
+                }
+            },
+            mansion3: {
+                "C-1": { 
+                    description: "Gem behind the clock", 
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/old_clockworks_c1.jpg", 
+                    steps: "Pull the clock's hand to reveal the gem." 
+                },
+                "C-2": { 
+                    description: "Boo near the gears", 
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/old_clockworks_c2.jpg", 
+                    steps: "Use the Dark-Light Device on the gears to reveal Boo's hiding spot." 
+                },
+                "C-3": {
+                    description: "Gem in the tower",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/old_clockworks_c3.jpg",
+                    steps: "Activate the tower mechanism to release the gem."
+                },
+                "C-4": {
+                    description: "Gem in the clockwork room",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/old_clockworks_c4.jpg",
+                    steps: "Pull the levers to move the gears and reveal the gem."
+                },
+                "C-5": {
+                    description: "Gem in the secret chamber",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/old_clockworks_c5.jpg",
+                    steps: "Use the Dark-Light Device in the secret chamber to uncover the gem."
+                },
+                "Boss": {
+                    description: "Boss battle with the C-5 gem",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/old_clockworks_boss.jpg",
+                    steps: "Defeat the boss to obtain the final gem of the mission."
+                }
+            },
+            mansion4: {
+                "D-1": { 
+                    description: "Gem in the cave", 
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/secret_mine_d1.jpg", 
+                    steps: "Light up the cave using the Dark-Light Device to reveal the gem." 
+                },
+                "Boss": {
+                    description: "Boss battle with the D-1 gem",
+                    img: "https://gamerant.com/luigis-mansion-2-hd-collectible-guide-boo-gem-locations-faq/img/secret_mine_boss.jpg",
+                    steps: "Defeat the boss to obtain the final gem of the mission."
                 }
             }
         };
-        
+
         const missions = {
-            mansion1: ["A-1", "A-2", "A-3", "A-4", "A-5", "Boss"],
-            mansion2: ["B-1", "B-2", "B-3", "B-4", "B-5", "Boss"],
-            mansion3: ["C-1", "C-2", "C-3", "C-4", "C-5", "Boss"],
-            mansion4: ["D-1", "D-2", "D-3", "D-4", "Boss"],
-            mansion5: ["E-1", "E-2", "E-3", "E-4", "E-5", "Boss"]
+            mansion1: ["A-1", "A-2", "A-3", "A-4", "A-5", "Boo", "Boss"],
+            mansion2: ["B-1", "B-2", "B-3", "B-5", "Boo", "Boss"],
+            mansion3: ["C-1", "C-2", "C-3", "C-4", "C-5", "Boo", "Boss"],
+            mansion4: ["D-1", "Boss"],
+            mansion5: ["E-1", "E-2", "E-3", "E-4", "E-5", "Boo", "Boss"]
         };
 
         function updateMissions() {
